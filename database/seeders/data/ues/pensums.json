@@ -1,0 +1,3044 @@
+{
+  "institucion": "Universidad de El Salvador",
+  "facultad": {
+    "codigo": "FMP",
+    "nombre": "Facultad Multidisciplinaria Paracentral"
+  },
+  "sede": {
+    "codigo": "SV",
+    "nombre": "Sede San Vicente"
+  },
+  "consultado": "2026-11-12",
+  "planes": [
+    {
+      "codigo": "I00515",
+      "nombre": "Ingeniería de Sistemas Informáticos",
+      "plan": "2025",
+      "modalidad": "Semipresencial",
+      "total_asignaturas": 56,
+      "total_uv": 200,
+      "fuente": {
+        "url": "https://fmp.ues.edu.sv/PaginaWeb/files/pdfs/academicaMallas/INGENIER%C3%8DA%20DE%20SISTEMAS%20INFORM%C3%81TICOS-PLAN2025.pdf",
+        "sha256": "f1492a0959dab392a1b7046a40573406991ced35dd69fc621c29950eaeff34d5",
+        "consultado": "2026-11-12"
+      },
+      "notas": [
+        "Los seis espacios de técnicas electivas no tienen código ni catálogo de opciones en esta malla; sus identificadores ELECTIVA-* son internos, no códigos UES.",
+        "Las asignaturas extraordinarias se ubican en el ciclo cuya columna ocupa la malla; no se inventa una oferta de verano.",
+        "Los requisitos de 70, 152 y 175 UV y los requisitos propios de las electivas se conservan como texto; el modelo actual no puede aplicarlos.",
+        "La malla identifica I00515; el catálogo académico 2026 describe I10515. Se respeta el código del documento específico y no se declaran equivalentes."
+      ],
+      "opciones": [],
+      "materias": [
+        {
+          "correlativo": 1,
+          "codigo": "FPC115",
+          "codigo_oficial": "FPC115",
+          "nombre": "Fundamentos de Programación",
+          "nivel": 1,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 2,
+          "codigo": "ALV115",
+          "codigo_oficial": "ALV115",
+          "nombre": "Álgebra Lineal y Vectorial",
+          "nivel": 1,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 3,
+          "codigo": "FEM115",
+          "codigo_oficial": "FEM115",
+          "nombre": "Fundamentos Empresariales",
+          "nivel": 1,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 4,
+          "codigo": "CAD115",
+          "codigo_oficial": "CAD115",
+          "nombre": "Cálculo Diferencial",
+          "nivel": 1,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 5,
+          "codigo": "ISS115",
+          "codigo_oficial": "ISS115",
+          "nombre": "Ingeniería de Sistemas y Sociedad",
+          "nivel": 1,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 6,
+          "codigo": "ESD115",
+          "codigo_oficial": "ESD115",
+          "nombre": "Estructuras de Datos I",
+          "nivel": 2,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "1,2",
+          "prerrequisitos": [
+            1,
+            2
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 7,
+          "codigo": "TSI115",
+          "codigo_oficial": "TSI115",
+          "nombre": "Teoría de Sistemas",
+          "nivel": 2,
+          "orden": 2,
+          "creditos": 2,
+          "requisito_fuente": "3",
+          "prerrequisitos": [
+            3
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 8,
+          "codigo": "POO115",
+          "codigo_oficial": "POO115",
+          "nombre": "Programación Orientada a Objetos",
+          "nivel": 2,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "1",
+          "prerrequisitos": [
+            1
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 9,
+          "codigo": "CAI115",
+          "codigo_oficial": "CAI115",
+          "nombre": "Cálculo Integral",
+          "nivel": 2,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "2,4",
+          "prerrequisitos": [
+            2,
+            4
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 10,
+          "codigo": "MEC115",
+          "codigo_oficial": "MEC115",
+          "nombre": "Mecánica Clásica",
+          "nivel": 2,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "2,4",
+          "prerrequisitos": [
+            2,
+            4
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 11,
+          "codigo": "ING115",
+          "codigo_oficial": "ING115",
+          "nombre": "Inglés I",
+          "nivel": 2,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": true,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 12,
+          "codigo": "ESD215",
+          "codigo_oficial": "ESD215",
+          "nombre": "Estructuras de Datos II",
+          "nivel": 3,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "6",
+          "prerrequisitos": [
+            6
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 13,
+          "codigo": "APE115",
+          "codigo_oficial": "APE115",
+          "nombre": "Aplicaciones de Escritorio",
+          "nivel": 3,
+          "orden": 2,
+          "creditos": 2,
+          "requisito_fuente": "6,8",
+          "prerrequisitos": [
+            6,
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 14,
+          "codigo": "BAD115",
+          "codigo_oficial": "BAD115",
+          "nombre": "Base de Datos I",
+          "nivel": 3,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "6",
+          "prerrequisitos": [
+            6
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 15,
+          "codigo": "SCO115",
+          "codigo_oficial": "SCO115",
+          "nombre": "Sistemas Contables",
+          "nivel": 3,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "3",
+          "prerrequisitos": [
+            3
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 16,
+          "codigo": "CAM115",
+          "codigo_oficial": "CAM115",
+          "nombre": "Cálculo Multivariable",
+          "nivel": 3,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 17,
+          "codigo": "PPI115",
+          "codigo_oficial": "PPI115",
+          "nombre": "Programación para Internet",
+          "nivel": 4,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "13,14",
+          "prerrequisitos": [
+            13,
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 18,
+          "codigo": "INR115",
+          "codigo_oficial": "INR115",
+          "nombre": "Ingeniería de Requerimientos",
+          "nivel": 4,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "7,14",
+          "prerrequisitos": [
+            7,
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 19,
+          "codigo": "BAD215",
+          "codigo_oficial": "BAD215",
+          "nombre": "Base de Datos II",
+          "nivel": 4,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "12,14",
+          "prerrequisitos": [
+            12,
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 20,
+          "codigo": "ESB115",
+          "codigo_oficial": "ESB115",
+          "nombre": "Estadística Básica",
+          "nivel": 4,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "16",
+          "prerrequisitos": [
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 21,
+          "codigo": "EMA115",
+          "codigo_oficial": "EMA115",
+          "nombre": "Electricidad y Magnetismo",
+          "nivel": 4,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "10,16",
+          "prerrequisitos": [
+            10,
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 22,
+          "codigo": "ING215",
+          "codigo_oficial": "ING215",
+          "nombre": "Inglés II",
+          "nivel": 4,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "11",
+          "prerrequisitos": [
+            11
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": true,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 23,
+          "codigo": "FMP115",
+          "codigo_oficial": "FMP115",
+          "nombre": "Fundamentos de Emprendimiento",
+          "nivel": 4,
+          "orden": 7,
+          "creditos": 2,
+          "requisito_fuente": "70 U.V.",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": true,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 24,
+          "codigo": "ELECTIVA-I",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva I",
+          "nivel": 5,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 25,
+          "codigo": "FPI115",
+          "codigo_oficial": "FPI115",
+          "nombre": "Formulación y Evaluación de Proyectos Informáticos I",
+          "nivel": 5,
+          "orden": 2,
+          "creditos": 2,
+          "requisito_fuente": "15",
+          "prerrequisitos": [
+            15
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 26,
+          "codigo": "DSI115",
+          "codigo_oficial": "DSI115",
+          "nombre": "Diseño de Software",
+          "nivel": 5,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "18",
+          "prerrequisitos": [
+            18
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 27,
+          "codigo": "ESA115",
+          "codigo_oficial": "ESA115",
+          "nombre": "Estadística Aplicada",
+          "nivel": 5,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "20",
+          "prerrequisitos": [
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 28,
+          "codigo": "ARC115",
+          "codigo_oficial": "ARC115",
+          "nombre": "Arquitecturas de Computadoras",
+          "nivel": 5,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "12,21",
+          "prerrequisitos": [
+            12,
+            21
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 29,
+          "codigo": "ELECTIVA-II",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva II",
+          "nivel": 6,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 30,
+          "codigo": "FPI215",
+          "codigo_oficial": "FPI215",
+          "nombre": "Formulación y Evaluación de Proyectos Informáticos II",
+          "nivel": 6,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "18,25",
+          "prerrequisitos": [
+            18,
+            25
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 31,
+          "codigo": "ASC115",
+          "codigo_oficial": "ASC115",
+          "nombre": "Aseguramiento de la Calidad de Software",
+          "nivel": 6,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "26",
+          "prerrequisitos": [
+            26
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 32,
+          "codigo": "ARS115",
+          "codigo_oficial": "ARS115",
+          "nombre": "Arquitectura de Software I",
+          "nivel": 6,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "26",
+          "prerrequisitos": [
+            26
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 33,
+          "codigo": "GTH115",
+          "codigo_oficial": "GTH115",
+          "nombre": "Gestión del Talento Humano",
+          "nivel": 6,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "25",
+          "prerrequisitos": [
+            25
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 34,
+          "codigo": "ING315",
+          "codigo_oficial": "ING315",
+          "nombre": "Inglés III",
+          "nivel": 6,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "22",
+          "prerrequisitos": [
+            22
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": true,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 35,
+          "codigo": "ELECTIVA-III",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva III",
+          "nivel": 7,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 36,
+          "codigo": "PAE115",
+          "codigo_oficial": "PAE115",
+          "nombre": "Programación para Arquitecturas Empresariales",
+          "nivel": 7,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "32",
+          "prerrequisitos": [
+            32
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 37,
+          "codigo": "ARS215",
+          "codigo_oficial": "ARS215",
+          "nombre": "Arquitectura de Software II",
+          "nivel": 7,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "32",
+          "prerrequisitos": [
+            32
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 38,
+          "codigo": "SIO115",
+          "codigo_oficial": "SIO115",
+          "nombre": "Sistemas Operativos",
+          "nivel": 7,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "28",
+          "prerrequisitos": [
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 39,
+          "codigo": "FDR115",
+          "codigo_oficial": "FDR115",
+          "nombre": "Fundamento de Redes",
+          "nivel": 7,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "28",
+          "prerrequisitos": [
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 40,
+          "codigo": "ELECTIVA-IV",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva IV",
+          "nivel": 8,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 41,
+          "codigo": "MPS115",
+          "codigo_oficial": "MPS115",
+          "nombre": "Mercadeo de Productos y Servicios de TI",
+          "nivel": 8,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "30",
+          "prerrequisitos": [
+            30
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 42,
+          "codigo": "GPS115",
+          "codigo_oficial": "GPS115",
+          "nombre": "Gestión de Proyectos de Desarrollo de Software",
+          "nivel": 8,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "30,37,39",
+          "prerrequisitos": [
+            30,
+            37,
+            39
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 43,
+          "codigo": "MIP115",
+          "codigo_oficial": "MIP115",
+          "nombre": "Microprogramación",
+          "nivel": 8,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "38",
+          "prerrequisitos": [
+            38
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 44,
+          "codigo": "SEI115",
+          "codigo_oficial": "SEI115",
+          "nombre": "Seguridad Informática",
+          "nivel": 8,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "38,39",
+          "prerrequisitos": [
+            38,
+            39
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 45,
+          "codigo": "ING415",
+          "codigo_oficial": "ING415",
+          "nombre": "Inglés IV",
+          "nivel": 8,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "34",
+          "prerrequisitos": [
+            34
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": true,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 46,
+          "codigo": "ELECTIVA-V",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva V",
+          "nivel": 9,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 47,
+          "codigo": "GEI115",
+          "codigo_oficial": "GEI115",
+          "nombre": "Gerencia Informática",
+          "nivel": 9,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "41",
+          "prerrequisitos": [
+            41
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 48,
+          "codigo": "MEI115",
+          "codigo_oficial": "MEI115",
+          "nombre": "Metodología de la Investigación Científica",
+          "nivel": 9,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "152 U.V.",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 49,
+          "codigo": "IAD115",
+          "codigo_oficial": "IAD115",
+          "nombre": "Introducción a la Analítica de Datos",
+          "nivel": 9,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "27,37",
+          "prerrequisitos": [
+            27,
+            37
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 50,
+          "codigo": "DRD115",
+          "codigo_oficial": "DRD115",
+          "nombre": "Diseño de Redes de Datos",
+          "nivel": 9,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "18,44",
+          "prerrequisitos": [
+            18,
+            44
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 51,
+          "codigo": "ELECTIVA-VI",
+          "codigo_oficial": null,
+          "nombre": "Técnica Electiva VI",
+          "nivel": 10,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "**",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 52,
+          "codigo": "PLE115",
+          "codigo_oficial": "PLE115",
+          "nombre": "Planeación Estratégica",
+          "nivel": 10,
+          "orden": 2,
+          "creditos": 2,
+          "requisito_fuente": "41,47",
+          "prerrequisitos": [
+            41,
+            47
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 53,
+          "codigo": "COS115",
+          "codigo_oficial": "COS115",
+          "nombre": "Continuidad de Servicios",
+          "nivel": 10,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "47",
+          "prerrequisitos": [
+            47
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 54,
+          "codigo": "GRD115",
+          "codigo_oficial": "GRD115",
+          "nombre": "Gestión de Redes de Datos",
+          "nivel": 10,
+          "orden": 4,
+          "creditos": 2,
+          "requisito_fuente": "50",
+          "prerrequisitos": [
+            50
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 55,
+          "codigo": "GEC115",
+          "codigo_oficial": "GEC115",
+          "nombre": "Gestión del Conocimiento",
+          "nivel": 10,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "47",
+          "prerrequisitos": [
+            47
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 56,
+          "codigo": "TAG115",
+          "codigo_oficial": "TAG115",
+          "nombre": "Taller de Grado",
+          "nivel": 10,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "175 U.V.",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        }
+      ],
+      "nota_minima_aprobacion": 6.0,
+      "cum_minimo_exigible": 7.0
+    },
+    {
+      "codigo": "L70803",
+      "nombre": "Licenciatura en Administración de Empresas",
+      "plan": "1994",
+      "modalidad": null,
+      "total_asignaturas": 44,
+      "total_uv": 165,
+      "fuente": {
+        "url": "https://fmp.ues.edu.sv/PaginaWeb/files/pdfs/academicaMallas/LICENCIATURA%20EN%20ADMINISTRACI%C3%93N%20DE%20EMPRESAS.pdf",
+        "sha256": "18d5345d3f5db38078db25490560ceb75c9abe86242aa69ff581bac53b87eb60",
+        "consultado": "2026-11-12"
+      },
+      "notas": [
+        "Los cursos 41 a 44 aparecen en el área de sustentación técnica, fuera de la cuadrícula de ciclos. Se almacenan al final (nivel 10) solo como orden interno, no como ciclo oficial.",
+        "La malla muestra 4 junto a cada espacio electivo en la línea de requisitos y 4 UV por opción. Se conserva literalmente, sin inferir que sea la regla completa de selección.",
+        "Hay dos espacios electivos y cuatro opciones de subespecialización de 4 UV. No se elige una ruta por el estudiante.",
+        "Tres opciones no muestran código: su código oficial se deja nulo. Los espacios electivos son identificadores internos."
+      ],
+      "opciones": [
+        {
+          "nombre": "Seminario de Finanzas",
+          "codigo_oficial": "SFI178",
+          "creditos": 4,
+          "requisito_fuente": "33"
+        },
+        {
+          "nombre": "Mercadeo Internacional",
+          "codigo_oficial": null,
+          "creditos": 4,
+          "requisito_fuente": "32"
+        },
+        {
+          "nombre": "Administración de la Producción II",
+          "codigo_oficial": null,
+          "creditos": 4,
+          "requisito_fuente": "30"
+        },
+        {
+          "nombre": "Administración de Personal III",
+          "codigo_oficial": null,
+          "creditos": 4,
+          "requisito_fuente": "29"
+        }
+      ],
+      "materias": [
+        {
+          "correlativo": 1,
+          "codigo": "FIG178",
+          "codigo_oficial": "FIG178",
+          "nombre": "Filosofía General",
+          "nivel": 1,
+          "orden": 1,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 2,
+          "codigo": "INE178",
+          "codigo_oficial": "INE178",
+          "nombre": "Introducción a la Economía I",
+          "nivel": 1,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 3,
+          "codigo": "TAD178",
+          "codigo_oficial": "TAD178",
+          "nombre": "Teoría Administrativa I",
+          "nivel": 1,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 4,
+          "codigo": "MAT178",
+          "codigo_oficial": "MAT178",
+          "nombre": "Matemática I",
+          "nivel": 1,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 5,
+          "codigo": "SOG178",
+          "codigo_oficial": "SOG178",
+          "nombre": "Sociología General",
+          "nivel": 2,
+          "orden": 1,
+          "creditos": 3,
+          "requisito_fuente": "1",
+          "prerrequisitos": [
+            1
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 6,
+          "codigo": "INE278",
+          "codigo_oficial": "INE278",
+          "nombre": "Introducción a la Economía II",
+          "nivel": 2,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "2",
+          "prerrequisitos": [
+            2
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 7,
+          "codigo": "TAD278",
+          "codigo_oficial": "TAD278",
+          "nombre": "Teoría Administrativa II",
+          "nivel": 2,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "3",
+          "prerrequisitos": [
+            3
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 8,
+          "codigo": "MAT278",
+          "codigo_oficial": "MAT278",
+          "nombre": "Matemática II",
+          "nivel": 2,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "4",
+          "prerrequisitos": [
+            4
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 9,
+          "codigo": "COF178",
+          "codigo_oficial": "COF178",
+          "nombre": "Contabilidad Financiera I",
+          "nivel": 3,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "7",
+          "prerrequisitos": [
+            7
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 10,
+          "codigo": "MIC178",
+          "codigo_oficial": "MIC178",
+          "nombre": "Microeconomía I",
+          "nivel": 3,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "6,8",
+          "prerrequisitos": [
+            6,
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 11,
+          "codigo": "TDI178",
+          "codigo_oficial": "TDI178",
+          "nombre": "Técnicas de Investigación",
+          "nivel": 3,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "5,6",
+          "prerrequisitos": [
+            5,
+            6
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 12,
+          "codigo": "MAT378",
+          "codigo_oficial": "MAT378",
+          "nombre": "Matemática III",
+          "nivel": 3,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "8",
+          "prerrequisitos": [
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 13,
+          "codigo": "COF278",
+          "codigo_oficial": "COF278",
+          "nombre": "Contabilidad Financiera II",
+          "nivel": 4,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 14,
+          "codigo": "MAC178",
+          "codigo_oficial": "MAC178",
+          "nombre": "Macroeconomía I",
+          "nivel": 4,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "10,11",
+          "prerrequisitos": [
+            10,
+            11
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 15,
+          "codigo": "DME178",
+          "codigo_oficial": "DME178",
+          "nombre": "Derecho Mercantil I",
+          "nivel": 4,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 16,
+          "codigo": "MAF178",
+          "codigo_oficial": "MAF178",
+          "nombre": "Matemática Financiera",
+          "nivel": 4,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "12",
+          "prerrequisitos": [
+            12
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 17,
+          "codigo": "PSO178",
+          "codigo_oficial": "PSO178",
+          "nombre": "Psicología Organizacional",
+          "nivel": 5,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "11,15",
+          "prerrequisitos": [
+            11,
+            15
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 18,
+          "codigo": "CCO178",
+          "codigo_oficial": "CCO178",
+          "nombre": "Contabilidad de Costos I",
+          "nivel": 5,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "13",
+          "prerrequisitos": [
+            13
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 19,
+          "codigo": "DME278",
+          "codigo_oficial": "DME278",
+          "nombre": "Derecho Mercantil II",
+          "nivel": 5,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "15",
+          "prerrequisitos": [
+            15
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 20,
+          "codigo": "EST178",
+          "codigo_oficial": "EST178",
+          "nombre": "Estadística I",
+          "nivel": 5,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "16",
+          "prerrequisitos": [
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 21,
+          "codigo": "DLA178",
+          "codigo_oficial": "DLA178",
+          "nombre": "Derecho Laboral",
+          "nivel": 6,
+          "orden": 1,
+          "creditos": 3,
+          "requisito_fuente": "19",
+          "prerrequisitos": [
+            19
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 22,
+          "codigo": "CCO278",
+          "codigo_oficial": "CCO278",
+          "nombre": "Contabilidad de Costos II",
+          "nivel": 6,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "18",
+          "prerrequisitos": [
+            18
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 23,
+          "codigo": "SIO178",
+          "codigo_oficial": "SIO178",
+          "nombre": "Sistemas Organizacionales",
+          "nivel": 6,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "17,20",
+          "prerrequisitos": [
+            17,
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 24,
+          "codigo": "EST278",
+          "codigo_oficial": "EST278",
+          "nombre": "Estadística II",
+          "nivel": 6,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "20",
+          "prerrequisitos": [
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 25,
+          "codigo": "APE178",
+          "codigo_oficial": "APE178",
+          "nombre": "Administración de Personal I",
+          "nivel": 7,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "21,23",
+          "prerrequisitos": [
+            21,
+            23
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 26,
+          "codigo": "CVA178",
+          "codigo_oficial": "CVA178",
+          "nombre": "Costeo Variable",
+          "nivel": 7,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "22,24",
+          "prerrequisitos": [
+            22,
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 27,
+          "codigo": "ASU178",
+          "codigo_oficial": "ASU178",
+          "nombre": "Administración Superior",
+          "nivel": 7,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "23",
+          "prerrequisitos": [
+            23
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 28,
+          "codigo": "MER178",
+          "codigo_oficial": "MER178",
+          "nombre": "Mercadotecnia I",
+          "nivel": 7,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "14,24",
+          "prerrequisitos": [
+            14,
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 29,
+          "codigo": "APE278",
+          "codigo_oficial": "APE278",
+          "nombre": "Administración de Personal II",
+          "nivel": 8,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "25",
+          "prerrequisitos": [
+            25
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 30,
+          "codigo": "APR178",
+          "codigo_oficial": "APR178",
+          "nombre": "Administración de la Producción I",
+          "nivel": 8,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "26,28",
+          "prerrequisitos": [
+            26,
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 31,
+          "codigo": "EDP178",
+          "codigo_oficial": "EDP178",
+          "nombre": "Ética y Desarrollo Profesional",
+          "nivel": 8,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "25",
+          "prerrequisitos": [
+            25
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 32,
+          "codigo": "MER278",
+          "codigo_oficial": "MER278",
+          "nombre": "Mercadotecnia II",
+          "nivel": 8,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "28",
+          "prerrequisitos": [
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 33,
+          "codigo": "ADF178",
+          "codigo_oficial": "ADF178",
+          "nombre": "Administración Financiera I",
+          "nivel": 9,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "26",
+          "prerrequisitos": [
+            26
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 34,
+          "codigo": "APU178",
+          "codigo_oficial": "APU178",
+          "nombre": "Administración Pública",
+          "nivel": 9,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "29",
+          "prerrequisitos": [
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 35,
+          "codigo": "SCO178",
+          "codigo_oficial": "SCO178",
+          "nombre": "Sistemas Computacionales",
+          "nivel": 9,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "27",
+          "prerrequisitos": [
+            27
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 36,
+          "codigo": "ELECTIVA-I",
+          "codigo_oficial": null,
+          "nombre": "Electiva I",
+          "nivel": 9,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "4",
+          "prerrequisitos": [
+            4
+          ],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 37,
+          "codigo": "ADF278",
+          "codigo_oficial": "ADF278",
+          "nombre": "Administración Financiera II",
+          "nivel": 10,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "33",
+          "prerrequisitos": [
+            33
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 38,
+          "codigo": "FEP178",
+          "codigo_oficial": "FEP178",
+          "nombre": "Formulación y Evaluación de Proyectos",
+          "nivel": 10,
+          "orden": 2,
+          "creditos": 5,
+          "requisito_fuente": "30,33",
+          "prerrequisitos": [
+            30,
+            33
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 39,
+          "codigo": "TPR178",
+          "codigo_oficial": "TPR178",
+          "nombre": "Técnicas Presupuestarias",
+          "nivel": 10,
+          "orden": 3,
+          "creditos": 5,
+          "requisito_fuente": "33",
+          "prerrequisitos": [
+            33
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 40,
+          "codigo": "ELECTIVA-II",
+          "codigo_oficial": null,
+          "nombre": "Electiva II",
+          "nivel": 10,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "4",
+          "prerrequisitos": [
+            4
+          ],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 41,
+          "codigo": "ING178",
+          "codigo_oficial": "ING178",
+          "nombre": "Inglés I",
+          "nivel": 10,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": null
+        },
+        {
+          "correlativo": 42,
+          "codigo": "ING278",
+          "codigo_oficial": "ING278",
+          "nombre": "Inglés II",
+          "nivel": 10,
+          "orden": 6,
+          "creditos": 2,
+          "requisito_fuente": "41",
+          "prerrequisitos": [
+            41
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": null
+        },
+        {
+          "correlativo": 43,
+          "codigo": "COM178",
+          "codigo_oficial": "COM178",
+          "nombre": "Computación I",
+          "nivel": 10,
+          "orden": 7,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": null
+        },
+        {
+          "correlativo": 44,
+          "codigo": "COM278",
+          "codigo_oficial": "COM278",
+          "nombre": "Computación II",
+          "nivel": 10,
+          "orden": 8,
+          "creditos": 2,
+          "requisito_fuente": "41,43",
+          "prerrequisitos": [
+            41,
+            43
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": null
+        }
+      ],
+      "nota_minima_aprobacion": 6.0,
+      "cum_minimo_exigible": 7.0
+    },
+    {
+      "codigo": "L70802",
+      "nombre": "Licenciatura en Contaduría Pública",
+      "plan": "1994",
+      "modalidad": null,
+      "total_asignaturas": 44,
+      "total_uv": 166,
+      "fuente": {
+        "url": "https://fmp.ues.edu.sv/PaginaWeb/files/pdfs/academicaMallas/LICENCIATURA%20EN%20CONTADUR%C3%8DA%20P%C3%9ABLICA.pdf",
+        "sha256": "78c98304ea525e39b863c6d56478b8d8092081cac0c8056d1387a3077f372f54",
+        "consultado": "2026-11-12"
+      },
+      "notas": [
+        "Los correlativos 40 y 44 son alternativas (APR178 o DLA178; FEP178 o LAD178), no cuatro materias obligatorias. Se representan como espacios de selección, con opciones explícitas.",
+        "El requisito del correlativo 40 es 36 ó 31. No se convierte OR en dos prerrequisitos AND.",
+        "El total impreso es 166 UV. Las alternativas de 3 UV pueden reducir ese total; los espacios conservan el máximo de 4 UV y no definen un avance individual."
+      ],
+      "opciones": [
+        {
+          "espacio": "ELECTIVA-IX",
+          "nombre": "Administración de la Producción",
+          "codigo_oficial": "APR178",
+          "creditos": 4
+        },
+        {
+          "espacio": "ELECTIVA-IX",
+          "nombre": "Derecho Laboral",
+          "codigo_oficial": "DLA178",
+          "creditos": 3
+        },
+        {
+          "espacio": "ELECTIVA-X",
+          "nombre": "Formulación y Evaluación de Proyectos",
+          "codigo_oficial": "FEP178",
+          "creditos": 4
+        },
+        {
+          "espacio": "ELECTIVA-X",
+          "nombre": "Legislación Aduanera",
+          "codigo_oficial": "LAD178",
+          "creditos": 3
+        }
+      ],
+      "materias": [
+        {
+          "correlativo": 1,
+          "codigo": "FIG178",
+          "codigo_oficial": "FIG178",
+          "nombre": "Filosofía General",
+          "nivel": 1,
+          "orden": 1,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 2,
+          "codigo": "INE178",
+          "codigo_oficial": "INE178",
+          "nombre": "Introducción a la Economía I",
+          "nivel": 1,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 3,
+          "codigo": "TAD178",
+          "codigo_oficial": "TAD178",
+          "nombre": "Teoría Administrativa I",
+          "nivel": 1,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 4,
+          "codigo": "MAT178",
+          "codigo_oficial": "MAT178",
+          "nombre": "Matemática I",
+          "nivel": 1,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 5,
+          "codigo": "SOG178",
+          "codigo_oficial": "SOG178",
+          "nombre": "Sociología General",
+          "nivel": 2,
+          "orden": 1,
+          "creditos": 3,
+          "requisito_fuente": "1",
+          "prerrequisitos": [
+            1
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 6,
+          "codigo": "INE278",
+          "codigo_oficial": "INE278",
+          "nombre": "Introducción a la Economía II",
+          "nivel": 2,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "2",
+          "prerrequisitos": [
+            2
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 7,
+          "codigo": "TAD278",
+          "codigo_oficial": "TAD278",
+          "nombre": "Teoría Administrativa II",
+          "nivel": 2,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "3",
+          "prerrequisitos": [
+            3
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 8,
+          "codigo": "MAT278",
+          "codigo_oficial": "MAT278",
+          "nombre": "Matemática II",
+          "nivel": 2,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "4",
+          "prerrequisitos": [
+            4
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 9,
+          "codigo": "COF178",
+          "codigo_oficial": "COF178",
+          "nombre": "Contabilidad Financiera I",
+          "nivel": 3,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "7",
+          "prerrequisitos": [
+            7
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 10,
+          "codigo": "MIC178",
+          "codigo_oficial": "MIC178",
+          "nombre": "Microeconomía I",
+          "nivel": 3,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "6,8",
+          "prerrequisitos": [
+            6,
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 11,
+          "codigo": "TDI178",
+          "codigo_oficial": "TDI178",
+          "nombre": "Técnicas de Investigación",
+          "nivel": 3,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "5,6",
+          "prerrequisitos": [
+            5,
+            6
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 12,
+          "codigo": "MAT378",
+          "codigo_oficial": "MAT378",
+          "nombre": "Matemática III",
+          "nivel": 3,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "8",
+          "prerrequisitos": [
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 13,
+          "codigo": "ING178",
+          "codigo_oficial": "ING178",
+          "nombre": "Inglés I",
+          "nivel": 3,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 14,
+          "codigo": "COF278",
+          "codigo_oficial": "COF278",
+          "nombre": "Contabilidad Financiera II",
+          "nivel": 4,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 15,
+          "codigo": "MAC178",
+          "codigo_oficial": "MAC178",
+          "nombre": "Macroeconomía I",
+          "nivel": 4,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "11,10",
+          "prerrequisitos": [
+            11,
+            10
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 16,
+          "codigo": "DME178",
+          "codigo_oficial": "DME178",
+          "nombre": "Derecho Mercantil I",
+          "nivel": 4,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 17,
+          "codigo": "MAF178",
+          "codigo_oficial": "MAF178",
+          "nombre": "Matemática Financiera",
+          "nivel": 4,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "12",
+          "prerrequisitos": [
+            12
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 18,
+          "codigo": "ING278",
+          "codigo_oficial": "ING278",
+          "nombre": "Inglés II",
+          "nivel": 4,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "13",
+          "prerrequisitos": [
+            13
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 19,
+          "codigo": "COF378",
+          "codigo_oficial": "COF378",
+          "nombre": "Contabilidad Financiera III",
+          "nivel": 5,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "14",
+          "prerrequisitos": [
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 20,
+          "codigo": "CCO178",
+          "codigo_oficial": "CCO178",
+          "nombre": "Contabilidad de Costos I",
+          "nivel": 5,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "14",
+          "prerrequisitos": [
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 21,
+          "codigo": "DME278",
+          "codigo_oficial": "DME278",
+          "nombre": "Derecho Mercantil II",
+          "nivel": 5,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "16",
+          "prerrequisitos": [
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 22,
+          "codigo": "EST178",
+          "codigo_oficial": "EST178",
+          "nombre": "Estadística I",
+          "nivel": 5,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "8",
+          "prerrequisitos": [
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 23,
+          "codigo": "COM178",
+          "codigo_oficial": "COM178",
+          "nombre": "Computación I",
+          "nivel": 5,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 24,
+          "codigo": "COF478",
+          "codigo_oficial": "COF478",
+          "nombre": "Contabilidad Financiera IV",
+          "nivel": 6,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "19",
+          "prerrequisitos": [
+            19
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 25,
+          "codigo": "CCO278",
+          "codigo_oficial": "CCO278",
+          "nombre": "Contabilidad de Costos II",
+          "nivel": 6,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "20",
+          "prerrequisitos": [
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 26,
+          "codigo": "DET178",
+          "codigo_oficial": "DET178",
+          "nombre": "Derecho Tributario I",
+          "nivel": 6,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "16",
+          "prerrequisitos": [
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 27,
+          "codigo": "EST278",
+          "codigo_oficial": "EST278",
+          "nombre": "Estadística II",
+          "nivel": 6,
+          "orden": 4,
+          "creditos": 5,
+          "requisito_fuente": "22",
+          "prerrequisitos": [
+            22
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 28,
+          "codigo": "COM278",
+          "codigo_oficial": "COM278",
+          "nombre": "Computación II",
+          "nivel": 6,
+          "orden": 5,
+          "creditos": 2,
+          "requisito_fuente": "13,23",
+          "prerrequisitos": [
+            13,
+            23
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 29,
+          "codigo": "COF578",
+          "codigo_oficial": "COF578",
+          "nombre": "Contabilidad Financiera V",
+          "nivel": 7,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "24",
+          "prerrequisitos": [
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 30,
+          "codigo": "CDS178",
+          "codigo_oficial": "CDS178",
+          "nombre": "Contabilidad de Seguros",
+          "nivel": 7,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "24",
+          "prerrequisitos": [
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 31,
+          "codigo": "DET278",
+          "codigo_oficial": "DET278",
+          "nombre": "Derecho Tributario II",
+          "nivel": 7,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "26",
+          "prerrequisitos": [
+            26
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 32,
+          "codigo": "ADF178",
+          "codigo_oficial": "ADF178",
+          "nombre": "Administración Financiera I",
+          "nivel": 7,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "19,20",
+          "prerrequisitos": [
+            19,
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 33,
+          "codigo": "AUD178",
+          "codigo_oficial": "AUD178",
+          "nombre": "Auditoría I",
+          "nivel": 8,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "25,29",
+          "prerrequisitos": [
+            25,
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 34,
+          "codigo": "CBY178",
+          "codigo_oficial": "CBY178",
+          "nombre": "Contabilidad Bancaria",
+          "nivel": 8,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "29",
+          "prerrequisitos": [
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 35,
+          "codigo": "CAG178",
+          "codigo_oficial": "CAG178",
+          "nombre": "Contabilidad Agrícola y Ganadera",
+          "nivel": 8,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "29",
+          "prerrequisitos": [
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 36,
+          "codigo": "ADF278",
+          "codigo_oficial": "ADF278",
+          "nombre": "Administración Financiera II",
+          "nivel": 8,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "32",
+          "prerrequisitos": [
+            32
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 37,
+          "codigo": "AUD278",
+          "codigo_oficial": "AUD278",
+          "nombre": "Auditoría II",
+          "nivel": 9,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "33",
+          "prerrequisitos": [
+            33
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 38,
+          "codigo": "CGU178",
+          "codigo_oficial": "CGU178",
+          "nombre": "Contabilidad Gubernamental",
+          "nivel": 9,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "29",
+          "prerrequisitos": [
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 39,
+          "codigo": "SCC178",
+          "codigo_oficial": "SCC178",
+          "nombre": "Sistemas Contables Computarizados",
+          "nivel": 9,
+          "orden": 3,
+          "creditos": 5,
+          "requisito_fuente": "29,28",
+          "prerrequisitos": [
+            29,
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 40,
+          "codigo": "ELECTIVA-IX",
+          "codigo_oficial": null,
+          "nombre": "Administración de la Producción o Derecho Laboral",
+          "nivel": 9,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "36 ó 31",
+          "prerrequisitos": [],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 41,
+          "codigo": "AUS178",
+          "codigo_oficial": "AUS178",
+          "nombre": "Auditoría de Sistemas",
+          "nivel": 10,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "37,39",
+          "prerrequisitos": [
+            37,
+            39
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 42,
+          "codigo": "SEA178",
+          "codigo_oficial": "SEA178",
+          "nombre": "Seminario de Auditoría",
+          "nivel": 10,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "37",
+          "prerrequisitos": [
+            37
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 43,
+          "codigo": "SEC178",
+          "codigo_oficial": "SEC178",
+          "nombre": "Seminario de Contabilidad",
+          "nivel": 10,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "39",
+          "prerrequisitos": [
+            39
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 44,
+          "codigo": "ELECTIVA-X",
+          "codigo_oficial": null,
+          "nombre": "Formulación y Evaluación de Proyectos o Legislación Aduanera",
+          "nivel": 10,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "40",
+          "prerrequisitos": [
+            40
+          ],
+          "tipo": "espacio_electivo",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        }
+      ],
+      "nota_minima_aprobacion": 6.0,
+      "cum_minimo_exigible": 7.0
+    },
+    {
+      "codigo": "L70439",
+      "nombre": "Licenciatura en Trabajo Social",
+      "plan": "2009",
+      "modalidad": null,
+      "total_asignaturas": 38,
+      "total_uv": 178,
+      "fuente": {
+        "url": "https://fmp.ues.edu.sv/PaginaWeb/files/pdfs/academicaMallas/LICENCIATURA%20EN%20TRABAJO%20SOCIAL.pdf",
+        "sha256": "5b7b3564ab5744560b63dda332c0ef3d4d38c4c3b49cac35ec1cfe81baf42e3b",
+        "consultado": "2026-11-12"
+      },
+      "notas": [
+        "Se conserva FSP274 tal como aparece en la fuente, aunque la asignatura anterior usa FPS174. No se corrige un código oficial por inferencia.",
+        "Plan 2009 con modificación indicada en la fuente del 3 de abril de 2014. La fecha de vigencia para asignación a cohortes no se deduce de esa aprobación."
+      ],
+      "opciones": [],
+      "materias": [
+        {
+          "correlativo": 1,
+          "codigo": "FIG174",
+          "codigo_oficial": "FIG174",
+          "nombre": "Filosofía General",
+          "nivel": 1,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 2,
+          "codigo": "SOG174",
+          "codigo_oficial": "SOG174",
+          "nombre": "Sociología General",
+          "nivel": 1,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 3,
+          "codigo": "TRE174",
+          "codigo_oficial": "TRE174",
+          "nombre": "Técnicas de Redacción",
+          "nivel": 1,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 4,
+          "codigo": "MAT174",
+          "codigo_oficial": "MAT174",
+          "nombre": "Matemática",
+          "nivel": 1,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 1
+        },
+        {
+          "correlativo": 5,
+          "codigo": "ITS174",
+          "codigo_oficial": "ITS174",
+          "nombre": "Introducción al Trabajo Social",
+          "nivel": 2,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "1,2",
+          "prerrequisitos": [
+            1,
+            2
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 6,
+          "codigo": "ANG174",
+          "codigo_oficial": "ANG174",
+          "nombre": "Antropología General",
+          "nivel": 2,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "2",
+          "prerrequisitos": [
+            2
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 7,
+          "codigo": "LCA174",
+          "codigo_oficial": "LCA174",
+          "nombre": "Lógica",
+          "nivel": 2,
+          "orden": 3,
+          "creditos": 3,
+          "requisito_fuente": "1",
+          "prerrequisitos": [
+            1
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 8,
+          "codigo": "EAC174",
+          "codigo_oficial": "EAC174",
+          "nombre": "Estadística Aplicada a las Ciencias Sociales",
+          "nivel": 2,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "4",
+          "prerrequisitos": [
+            4
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 2
+        },
+        {
+          "correlativo": 9,
+          "codigo": "MTB174",
+          "codigo_oficial": "MTB174",
+          "nombre": "Metodología de Trabajo Social I",
+          "nivel": 3,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "5",
+          "prerrequisitos": [
+            5
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 10,
+          "codigo": "DSI174",
+          "codigo_oficial": "DSI174",
+          "nombre": "Diagnóstico Comunitario y Recursos Institucionales",
+          "nivel": 3,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "5",
+          "prerrequisitos": [
+            5
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 11,
+          "codigo": "PGE174",
+          "codigo_oficial": "PGE174",
+          "nombre": "Psicología General",
+          "nivel": 3,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 12,
+          "codigo": "DEM174",
+          "codigo_oficial": "DEM174",
+          "nombre": "Demografía",
+          "nivel": 3,
+          "orden": 4,
+          "creditos": 3,
+          "requisito_fuente": "8",
+          "prerrequisitos": [
+            8
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 13,
+          "codigo": "SPU174",
+          "codigo_oficial": "SPU174",
+          "nombre": "Salud Pública",
+          "nivel": 3,
+          "orden": 5,
+          "creditos": 3,
+          "requisito_fuente": "B",
+          "prerrequisitos": [],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 3
+        },
+        {
+          "correlativo": 14,
+          "codigo": "MTB274",
+          "codigo_oficial": "MTB274",
+          "nombre": "Metodología de Trabajo Social II",
+          "nivel": 4,
+          "orden": 1,
+          "creditos": 6,
+          "requisito_fuente": "9",
+          "prerrequisitos": [
+            9
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 15,
+          "codigo": "PME174",
+          "codigo_oficial": "PME174",
+          "nombre": "Promoción Humana y Métodos de Educación",
+          "nivel": 4,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "9,10",
+          "prerrequisitos": [
+            9,
+            10
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 16,
+          "codigo": "DHU174",
+          "codigo_oficial": "DHU174",
+          "nombre": "Desarrollo Humano",
+          "nivel": 4,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "11",
+          "prerrequisitos": [
+            11
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 17,
+          "codigo": "HSP174",
+          "codigo_oficial": "HSP174",
+          "nombre": "Historia Socioeconómica y Política de El Salvador",
+          "nivel": 4,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "6",
+          "prerrequisitos": [
+            6
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 4
+        },
+        {
+          "correlativo": 18,
+          "codigo": "ETP174",
+          "codigo_oficial": "ETP174",
+          "nombre": "Ética Profesional",
+          "nivel": 5,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "14",
+          "prerrequisitos": [
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 19,
+          "codigo": "DLR174",
+          "codigo_oficial": "DLR174",
+          "nombre": "Desarrollo Local, Regional y Nacional",
+          "nivel": 5,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "15",
+          "prerrequisitos": [
+            15
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 20,
+          "codigo": "PLG174",
+          "codigo_oficial": "PLG174",
+          "nombre": "Psicología Social",
+          "nivel": 5,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "16",
+          "prerrequisitos": [
+            16
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 21,
+          "codigo": "MEO174",
+          "codigo_oficial": "MEO174",
+          "nombre": "Metodología Operativa",
+          "nivel": 5,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "14",
+          "prerrequisitos": [
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 22,
+          "codigo": "TPE174",
+          "codigo_oficial": "TPE174",
+          "nombre": "Teoría del Planeamiento Económico y Social",
+          "nivel": 5,
+          "orden": 5,
+          "creditos": 4,
+          "requisito_fuente": "17",
+          "prerrequisitos": [
+            17
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 5
+        },
+        {
+          "correlativo": 23,
+          "codigo": "FYS174",
+          "codigo_oficial": "FYS174",
+          "nombre": "Familia y Sociedad",
+          "nivel": 6,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "18",
+          "prerrequisitos": [
+            18
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 24,
+          "codigo": "GCD174",
+          "codigo_oficial": "GCD174",
+          "nombre": "Gestión Comunitaria para el Desarrollo Local",
+          "nivel": 6,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "19",
+          "prerrequisitos": [
+            19
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 25,
+          "codigo": "PCP174",
+          "codigo_oficial": "PCP174",
+          "nombre": "Psicopatología",
+          "nivel": 6,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "20",
+          "prerrequisitos": [
+            20
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 26,
+          "codigo": "MDT174",
+          "codigo_oficial": "MDT174",
+          "nombre": "Metodología Inductiva",
+          "nivel": 6,
+          "orden": 4,
+          "creditos": 4,
+          "requisito_fuente": "21",
+          "prerrequisitos": [
+            21
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 6
+        },
+        {
+          "correlativo": 27,
+          "codigo": "MFG174",
+          "codigo_oficial": "MFG174",
+          "nombre": "Métodos de Intervención con Familia y Grupos",
+          "nivel": 7,
+          "orden": 1,
+          "creditos": 6,
+          "requisito_fuente": "23,25",
+          "prerrequisitos": [
+            23,
+            25
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 28,
+          "codigo": "MSS174",
+          "codigo_oficial": "MSS174",
+          "nombre": "Movimientos Sociales",
+          "nivel": 7,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "17",
+          "prerrequisitos": [
+            17
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 29,
+          "codigo": "LSO174",
+          "codigo_oficial": "LSO174",
+          "nombre": "Legislación Social I",
+          "nivel": 7,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "14",
+          "prerrequisitos": [
+            14
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 30,
+          "codigo": "FPS174",
+          "codigo_oficial": "FPS174",
+          "nombre": "Formulación y Evaluación de Proyectos Sociales I",
+          "nivel": 7,
+          "orden": 4,
+          "creditos": 6,
+          "requisito_fuente": "24",
+          "prerrequisitos": [
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 7
+        },
+        {
+          "correlativo": 31,
+          "codigo": "GSO174",
+          "codigo_oficial": "GSO174",
+          "nombre": "Gerencia Social",
+          "nivel": 8,
+          "orden": 1,
+          "creditos": 4,
+          "requisito_fuente": "30",
+          "prerrequisitos": [
+            30
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 32,
+          "codigo": "PFO174",
+          "codigo_oficial": "PFO174",
+          "nombre": "Práctica Formativa",
+          "nivel": 8,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "14,24",
+          "prerrequisitos": [
+            14,
+            24
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 33,
+          "codigo": "LSO274",
+          "codigo_oficial": "LSO274",
+          "nombre": "Legislación Social II",
+          "nivel": 8,
+          "orden": 3,
+          "creditos": 4,
+          "requisito_fuente": "29",
+          "prerrequisitos": [
+            29
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 34,
+          "codigo": "FSP274",
+          "codigo_oficial": "FSP274",
+          "nombre": "Formulación y Evaluación de Proyectos Sociales II",
+          "nivel": 8,
+          "orden": 4,
+          "creditos": 6,
+          "requisito_fuente": "30",
+          "prerrequisitos": [
+            30
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 8
+        },
+        {
+          "correlativo": 35,
+          "codigo": "PPF174",
+          "codigo_oficial": "PPF174",
+          "nombre": "Práctica Profesional I",
+          "nivel": 9,
+          "orden": 1,
+          "creditos": 8,
+          "requisito_fuente": "27,32,34",
+          "prerrequisitos": [
+            27,
+            32,
+            34
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 36,
+          "codigo": "POS174",
+          "codigo_oficial": "POS174",
+          "nombre": "Política Social",
+          "nivel": 9,
+          "orden": 2,
+          "creditos": 4,
+          "requisito_fuente": "22,28",
+          "prerrequisitos": [
+            22,
+            28
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 9
+        },
+        {
+          "correlativo": 37,
+          "codigo": "PPF274",
+          "codigo_oficial": "PPF274",
+          "nombre": "Práctica Profesional II",
+          "nivel": 10,
+          "orden": 1,
+          "creditos": 8,
+          "requisito_fuente": "35",
+          "prerrequisitos": [
+            35
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        },
+        {
+          "correlativo": 38,
+          "codigo": "SRN174",
+          "codigo_oficial": "SRN174",
+          "nombre": "Seminario de la Realidad Nacional",
+          "nivel": 10,
+          "orden": 2,
+          "creditos": 6,
+          "requisito_fuente": "26,35",
+          "prerrequisitos": [
+            26,
+            35
+          ],
+          "tipo": "asignatura",
+          "extraordinaria": false,
+          "nivel_oficial": 10
+        }
+      ],
+      "nota_minima_aprobacion": 6.0,
+      "cum_minimo_exigible": 7.0
+    }
+  ]
+}

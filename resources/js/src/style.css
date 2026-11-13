@@ -1,0 +1,150 @@
+/* --------------------------------------------------------------------------
+ * Base: Tailwind + Tema
+ * -------------------------------------------------------------------------- */
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "./styles/theme.css";
+
+/* --------------------------------------------------------------------------
+ * Imports específicos de proyecto (después de definir tokens)
+ * -------------------------------------------------------------------------- */
+@import "./styles/tailwind-components.css";
+@import "./styles/icon-font.css";
+
+/* --------------------------------------------------------------------------
+ * Base layer: resets específicos y states globales
+ * -------------------------------------------------------------------------- */
+@layer base {
+  /* Autofill: Chrome/WebKit, Firefox y Prime inputs */
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill,
+  input:-moz-autofill,
+  textarea:-moz-autofill,
+  select:-moz-autofill,
+  .p-inputtext:-webkit-autofill,
+  .p-password input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px var(--autofill-bg) inset !important;
+    -webkit-text-fill-color: var(--autofill-fg) !important;
+    -moz-text-fill-color: var(--autofill-fg) !important;
+    caret-color: var(--autofill-fg) !important;
+    transition: background-color 9999s ease-in-out 0s !important; /* evita flash */
+  }
+
+  /* Accesibilidad: focus en botones de Prime */
+  .p-button:where(:focus, :focus-visible, :active) {
+    border: 0 !important;
+    border-color: var(--p-primary-color) !important;
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--p-primary-color) 35%, transparent) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Componentes (PrimeVue y utilidades de UI)
+ * -------------------------------------------------------------------------- */
+input, textarea, select {
+  color: var(--color-text) !important;
+  border-radius: 0.6rem !important;
+  background: var(--color-input) !important;
+  border: none !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border: 1px solid var(--p-inputtext-focus-border-color) !important;
+}
+
+.p-inputtext, .p-multiselect {
+  color: var(--color-text) !important;
+  background: var(--color-input) !important;
+  border: none !important;
+}
+
+.p-inputchips-input-item input {
+  border: none !important;
+}
+
+.p-select-filter {
+  background: var(--color-brand-secondary) !important;
+}
+
+.p-multiselect-header, .p-multiselect-overlay, .p-multiselect-option {
+  border: 1px solid var(--color-surface) !important;
+  color: var(--color-text) !important;
+  background: var(--color-surface) !important;
+}
+
+.p-select-option > .p-focus {
+  background: var(--color-brand-200) !important;
+}
+
+.p-select-option.p-select-option-selected,
+.p-select-option.p-select-option-selected .p-select-option-label {
+  background-color: var(--color-brand-active) !important;
+  color: var(--color-brand-contrast) !important;
+}
+
+.p-select-option.p-focus,
+.p-select-option.p-focus .p-select-option-label {
+  color: var(--color-brand-contrast) !important;
+}
+
+.p-select-option.p-select-option-selected.p-focus {
+  background-color: var(--color-brand-active) !important;
+  color: var(--color-brand-contrast) !important;
+}
+
+.p-inputtext {
+  height: 44px !important;
+}
+
+:is(.p-placeholder, .p-chip-label, .p-inputtext::placeholder) {
+  font-size: 1rem !important;
+}
+
+.p-button-text:not(:disabled):hover {
+  color: var(--color-brand-contrast) !important;
+}
+
+.p-button-text.p-button-secondary:not(:disabled):hover {
+  color: var(--p-button-text-secondary-hover-color) !important;
+}
+
+.p-datepicker-input {
+  padding: 1rem !important;
+}
+
+.p-select-label { align-content: space-around !important; }
+
+.p-dialog-footer { display: block !important; }
+
+.p-galleria {
+  border: none !important;
+}
+
+[data-list="bullet"] {
+  list-style: none !important;
+  padding-left: 1.5rem !important;
+}
+
+[data-list="bullet"]::before {
+  content: "•" !important;
+  line-height: 1 !important;
+  margin-right: 0.5rem !important;
+}
+
+[data-list="ordered"] {
+  list-style-type: decimal !important;
+  list-style-position: inside !important;
+  padding-left: 1.5rem !important;
+}
+
+[data-list="ordered"]::before {
+  content: none !important;
+}
+
+/* --------------------------------------------------------------------------
+ * Transiciones (util para mount/unmount)
+ * -------------------------------------------------------------------------- */
+.fade-enter-active, .fade-leave-active { transition: opacity 0.3s; }
+.fade-enter-from, .fade-leave-to { opacity: 0; }
+.fade-enter-to, .fade-leave-from { opacity: 1; }

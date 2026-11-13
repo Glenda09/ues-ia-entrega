@@ -1,0 +1,30 @@
+name: template-mvc-laravel-standard
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                WWWUSER: "${WWWUSER:-1000}"
+                WWWGROUP: "${WWWGROUP:-1000}"
+        image: template-mvc-laravel-standard/app:php8.5
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
+        ports:
+            - "${APP_PORT:-8090}:8080"
+        environment:
+            WWWUSER: "${WWWUSER:-1000}"
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: "${SAIL_XDEBUG_MODE:-off}"
+            XDEBUG_CONFIG: "${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}"
+        volumes:
+            - ".:/var/www/html"
+            - "./storage:/var/www/html/storage"
+            - "/var/www/html/vendor"
+        networks:
+            - template-mvc-laravel-standard
+        user: "${WWWUSER:-1000}:${WWWGROUP:-1000}"
+networks:
+    template-mvc-laravel-standard:
+        name: template-mvc-laravel-standard
+        driver: bridge

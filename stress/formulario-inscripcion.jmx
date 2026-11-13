@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Prueba de estrés del formulario de inscripción (admisión, EXP-01).
+  Ejercita el guardado por etapas del borrador de ingreso tal como lo hace
+  AdmisionFormularioView.vue:
+    GET   /api/academico/mi-borrador-ingreso?convocatoria=N
+    PATCH /api/academico/mi-borrador-ingreso  (etapa 2: datos personales)
+    PATCH /api/academico/mi-borrador-ingreso  (etapa 3: información académica)
+  La carga objetivo (OBJETIVO_RPS, 15 por defecto) se regula con un
+  Constant Throughput Timer compartido entre todos los hilos.
+  Parámetros: config.properties (cargar con -q) o -J<CLAVE>=valor.
+  Ejecución: ver README.md (run-stress.ps1 / run-stress.sh). Sin scripts Groovy:
+  solo extractores y aserciones nativas, compatible con cualquier Java soportado.
+  Resumen.java evalúa el resultado contra los criterios de config.properties.
+-->
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Estrés - Formulario de inscripción">
+      <stringProp name="TestPlan.comments">Carga sostenida sobre el guardado del borrador de ingreso. Configura BASE_URL en config.properties.</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variables">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL</stringProp>
+            <stringProp name="Argument.value">${__P(BASE_URL,http://localhost:8090)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CONVOCATORIA" elementType="Argument">
+            <stringProp name="Argument.name">CONVOCATORIA</stringProp>
+            <stringProp name="Argument.value">${__P(CONVOCATORIA,1)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PASSWORD" elementType="Argument">
+            <stringProp name="Argument.name">PASSWORD</stringProp>
+            <stringProp name="Argument.value">${__P(PASSWORD,Stress2026!)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="Valores HTTP por defecto">
+        <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+        <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout">${__P(CONNECT_TIMEOUT_MS,5000)}</stringProp>
+        <stringProp name="HTTPSampler.response_timeout">${__P(RESPONSE_TIMEOUT_MS,30000)}</stringProp>
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Cabeceras JSON">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">application/json</stringProp>
+          </elementProp>
+          <elementProp name="" elementType="Header">
+            <stringProp name="Header.name">Content-Type</stringProp>
+            <stringProp name="Header.value">application/json; charset=UTF-8</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Aspirantes">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Bucle">
+          <stringProp name="LoopController.loops">-1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(HILOS,50)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(RAMPA_SEG,60)}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.duration">${__P(DURACION_SEG,300)}</stringProp>
+        <stringProp name="ThreadGroup.delay">0</stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Preparación (una vez por aspirante)"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Preparación - Convocatoria">
+            <stringProp name="HTTPSampler.path">${BASE_URL}/api/publico/convocatorias/${CONVOCATORIA}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Convocatoria abierta (200)">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">La convocatoria no existe o está cerrada. Revisa CONVOCATORIA y BASE_URL.</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Oferta de ingreso general">
+              <stringProp name="JSONPostProcessor.referenceNames">ID_SEDE;ID_FACULTAD;ID_CARRERA;MODALIDAD_ESTUDIO;MODALIDAD_INGRESO</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.ofertas[?(@.modalidad_ingreso == 'general')].id_sede;$.data.ofertas[?(@.modalidad_ingreso == 'general')].id_facultad;$.data.ofertas[?(@.modalidad_ingreso == 'general')].id_carrera;$.data.ofertas[?(@.modalidad_ingreso == 'general')].modalidad_estudio;$.data.ofertas[?(@.modalidad_ingreso == 'general')].modalidad_ingreso</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1;1;1;1;1</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">SIN_OFERTA;SIN_OFERTA;SIN_OFERTA;SIN_OFERTA;SIN_OFERTA</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <JSONPathAssertion guiclass="JSONPathAssertionGui" testclass="JSONPathAssertion" testname="Tiene oferta general">
+              <stringProp name="JSON_PATH">$.data.ofertas[?(@.modalidad_ingreso == 'general')].id_sede</stringProp>
+              <stringProp name="EXPECTED_VALUE"></stringProp>
+              <boolProp name="JSONVALIDATION">false</boolProp>
+              <boolProp name="EXPECT_NULL">false</boolProp>
+              <boolProp name="INVERT">false</boolProp>
+              <boolProp name="ISREGEX">false</boolProp>
+            </JSONPathAssertion>
+            <hashTree/>
+            <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Detener aspirante si falla">
+              <intProp name="OnError.action">1</intProp>
+            </ResultAction>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Preparación - Login">
+            <stringProp name="HTTPSampler.path">${BASE_URL}/api/auth/login</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{"identifier":"aspirante.stress.${__threadNum}@ues.test","password":"${PASSWORD}"}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Login con token (200)">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="49586">200</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message">Login sin token. Ejecuta preparar-cuentas.php con la misma PASSWORD y desactiva el 2FA obligatorio (AUTH_2FA_ENFORCE_ALL=false); un 202 indica doble factor.</stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">8</intProp>
+            </ResponseAssertion>
+            <hashTree/>
+            <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Token JWT">
+              <stringProp name="JSONPostProcessor.referenceNames">TOKEN</stringProp>
+              <stringProp name="JSONPostProcessor.jsonPathExprs">$.access_token</stringProp>
+              <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+              <stringProp name="JSONPostProcessor.defaultValues">SIN_TOKEN</stringProp>
+            </JSONPostProcessor>
+            <hashTree/>
+            <ResultAction guiclass="ResultActionGui" testclass="ResultAction" testname="Detener aspirante si falla">
+              <intProp name="OnError.action">1</intProp>
+            </ResultAction>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Formulario"/>
+        <hashTree>
+          <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Objetivo de peticiones por segundo">
+            <intProp name="calcMode">4</intProp>
+            <stringProp name="throughput">${__jexl3(${__P(OBJETIVO_RPS,15)} * 60)}</stringProp>
+          </ConstantThroughputTimer>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Autorización">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${TOKEN}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Respuesta 200">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message">El formulario respondió con un estado distinto de 200</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Versión del borrador">
+            <stringProp name="JSONPostProcessor.comments">Conserva la versión optimista para el siguiente PATCH. Sin borrador (o tras un error) vuelve a 0 y la siguiente consulta la recupera.</stringProp>
+            <stringProp name="JSONPostProcessor.referenceNames">VERSION</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.data.borrador.version</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">0</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Formulario - Consultar borrador">
+            <stringProp name="HTTPSampler.path">${BASE_URL}/api/academico/mi-borrador-ingreso?convocatoria=${CONVOCATORIA}</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Formulario - Guardar datos personales">
+            <stringProp name="HTTPSampler.path">${BASE_URL}/api/academico/mi-borrador-ingreso</stringProp>
+            <stringProp name="HTTPSampler.method">PATCH</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{
+  "convocatoria": ${CONVOCATORIA},
+  "version": ${VERSION},
+  "etapa": 2,
+  "datos": {
+    "nombres": "Aspirante ${__threadNum}",
+    "primer_apellido": "Estrés",
+    "segundo_apellido": "Prueba",
+    "fecha_nacimiento": "2000-01-15",
+    "nacionalidad": "salvadoreña",
+    "dui": "01234567-8",
+    "nie": "${__Random(100000,999999)}",
+    "telefono_celular": "7${__Random(1000000,9999999)}",
+    "departamento": "San Salvador",
+    "municipio_distrito": "San Salvador Centro",
+    "direccion": "Colonia de prueba, casa ${__iterationNum}"
+  }
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Formulario - Guardar información académica">
+            <stringProp name="HTTPSampler.path">${BASE_URL}/api/academico/mi-borrador-ingreso</stringProp>
+            <stringProp name="HTTPSampler.method">PATCH</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{
+  "convocatoria": ${CONVOCATORIA},
+  "version": ${VERSION},
+  "etapa": 3,
+  "datos": {
+    "institucion_procedencia": "Instituto Nacional de prueba",
+    "tipo_bachillerato": "General",
+    "estado_graduacion": "graduado",
+    "anio_graduacion": 2018,
+    "tipo_prueba": "PAES",
+    "resultado_paes_avanzo": 7.5,
+    "modalidad_estudio": "${MODALIDAD_ESTUDIO}",
+    "modalidad_ingreso": "${MODALIDAD_INGRESO}",
+    "id_sede": ${ID_SEDE},
+    "id_facultad": ${ID_FACULTAD},
+    "id_carrera": ${ID_CARRERA},
+    "referencia_comprobante": "STRESS-${__threadNum}"
+  }
+}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

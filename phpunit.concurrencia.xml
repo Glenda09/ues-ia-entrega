@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Suite de concurrencia real sobre PostgreSQL (ENTREGA.md, INS-02, EXP-02, DOC-02, IA-BASE-01).
+  Usa EXCLUSIVAMENTE la base de pruebas ues_academico_test (se recrea en cada prueba).
+  Ejecutar: docker compose exec app php artisan test -c phpunit.concurrencia.xml
+-->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.5/phpunit.xsd"
+    bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="Concurrencia">
+            <directory>tests/Concurrencia</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="APP_ENV" value="testing" force="true" />
+        <env name="AUTH_2FA_ENFORCE_ALL" value="false" force="true" />
+        <env name="BCRYPT_ROUNDS" value="4" />
+        <env name="CACHE_STORE" value="array" force="true" />
+        <env name="DB_CONNECTION" value="pgsql" force="true" />
+        <env name="DB_DATABASE" value="ues_academico_test" force="true" />
+        <env name="MAIL_MAILER" value="array" force="true" />
+        <env name="QUEUE_CONNECTION" value="sync" force="true" />
+        <env name="SESSION_DRIVER" value="array" force="true" />
+    </php>
+</phpunit>

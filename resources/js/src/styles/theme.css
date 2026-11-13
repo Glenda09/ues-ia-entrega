@@ -1,0 +1,467 @@
+/* --------------------------------------------------------------------------
+ * Tema: registro de tokens en Tailwind v4 + defaults claros (light-soft)
+ *
+ * El runtime (themeStore + useColorMode) sobrescribe estos valores con
+ * `root.style.setProperty('--color-*', ...)` según la paleta activa.
+ * El bloque `@media (prefers-color-scheme: dark)` aplica la paleta
+ * oscura a la primera pintura cuando el SO está en modo oscuro,
+ * antes de que Vue monte (anti-FOUC).
+ * -------------------------------------------------------------------------- */
+@theme {
+  /* Defaults: light-soft. Escala de marca monotónica:
+     50 (más clara) → 100 → 200 (acento) → brand (base) → button-hover → active (más oscura) */
+  --color-sidebar: #f7f8fa;
+  --color-sidebar-hover: #edeff2;
+  --color-sidebar-active: #e6eefe;
+  --color-sidebar-contrast: #111318;
+  --color-sidebar-muted: #4b5260;
+  --color-surface: #FAFAFA;
+  --color-surface-contrast: #26272B;
+  --color-surface-card: #FFFFFF;
+  --color-text: #26272B;
+  --color-link: #2B3AA8;
+  --color-danger: #C22222;
+  --color-danger-contrast: #FFFFFF;
+  --color-success: #157F3C;
+  --color-success-contrast: #FFFFFF;
+  --color-warning: #92590B;
+  --color-warning-contrast: #FFFFFF;
+  --color-info: #0369A1;
+  --color-info-contrast: #FFFFFF;
+  --color-secondary: #5B5D63;
+  --color-secondary-100: #EEF0F8;
+  --color-brand-contrast: #FFFFFF;
+  --color-loading-spinner: #20265A;
+  --color-input: rgba(38, 39, 43, 0.06);
+  --color-brand: #20265A;
+  --color-brand-50: #E3E6F6;
+  --color-brand-100: #B7C0EC;
+  --color-brand-200: #4C58A8;
+  --color-brand-active: #141733;
+  --color-brand-hover: #EEF1FA;
+  --color-brand-button-hover: #2B3270;
+  --color-brand-secondary: #F3F4FA;
+  --color-autofill-bg: #FFFFFF;
+  --color-autofill-fg: #26272B;
+  --color-autofill-dark-bg: #EEF1FA;
+  --color-autofill-dark-fg: #26272B;
+  --color-toggle-bg: #C7CCEC;
+  --color-toggle-handle: #20265A;
+  --color-overlay: rgba(20, 23, 51, 0.45);
+}
+
+/* Anti-FOUC: si el SO está en oscuro y no hay preferencia guardada,
+   aplicamos la paleta dark-navy antes del primer render. El composable
+   useColorMode reescribe estos valores cuando hay preferencia explícita. */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --color-sidebar: #1c1f26;
+    --color-sidebar-hover: #252932;
+    --color-sidebar-active: #1c2a47;
+    --color-sidebar-contrast: #e7e8eb;
+    --color-sidebar-muted: #b3b8c2;
+    --color-surface: #0D0F1A;
+    --color-surface-contrast: #F5F6FA;
+    --color-surface-card: #161A2C;
+    --color-text: #F1F2F8;
+    --color-link: #8FA1FF;
+    --color-danger: #FF6B6B;
+    --color-danger-contrast: #0A0F2E;
+    --color-success: #4ADE80;
+    --color-success-contrast: #0A0F2E;
+    --color-warning: #FBBF24;
+    --color-warning-contrast: #0A0F2E;
+    --color-info: #38BDF8;
+    --color-info-contrast: #0A0F2E;
+    --color-secondary: #B8BAC9;
+    --color-secondary-100: #1E2438;
+    --color-brand-contrast: #FFFFFF;
+    --color-loading-spinner: #4C58C4;
+    --color-input: rgba(255, 255, 255, 0.06);
+    --color-brand: #0A0F2E;
+    --color-brand-50: #12183F;
+    --color-brand-100: #1B2354;
+    --color-brand-200: #3B48A6;
+    --color-brand-active: #4C58C4;
+    --color-brand-hover: #161C46;
+    --color-brand-button-hover: #232C63;
+    --color-brand-secondary: #141935;
+    --color-autofill-bg: #FFFFFF;
+    --color-autofill-fg: #0f172a;
+    --color-autofill-dark-bg: #161A2C;
+    --color-autofill-dark-fg: #F1F2F8;
+    --color-toggle-bg: #2A3153;
+    --color-toggle-handle: #8FA1FF;
+    --color-overlay: rgba(0, 0, 0, 0.65);
+  }
+}
+
+/* Paleta dark-navy aplicada explícitamente (toggle manual o auto-resolved).
+   Escala invertida respecto a light-soft: secondary/hover (paneles) → 50 → 100 →
+   brand (base, la más oscura) → button-hover → 200 → active (acento vívido). */
+:root.dark {
+  --color-sidebar: #1c1f26;
+  --color-sidebar-hover: #252932;
+  --color-sidebar-active: #1c2a47;
+  --color-sidebar-contrast: #e7e8eb;
+  --color-sidebar-muted: #b3b8c2;
+  --color-surface: #0D0F1A;
+  --color-surface-contrast: #F5F6FA;
+  --color-surface-card: #161A2C;
+  --color-text: #F1F2F8;
+  --color-link: #8FA1FF;
+  --color-danger: #FF6B6B;
+  --color-danger-contrast: #0A0F2E;
+  --color-success: #4ADE80;
+  --color-success-contrast: #0A0F2E;
+  --color-warning: #FBBF24;
+  --color-warning-contrast: #0A0F2E;
+  --color-info: #38BDF8;
+  --color-info-contrast: #0A0F2E;
+  --color-secondary: #B8BAC9;
+  --color-secondary-100: #1E2438;
+  --color-brand-contrast: #FFFFFF;
+  --color-loading-spinner: #4C58C4;
+  --color-input: rgba(255, 255, 255, 0.06);
+  --color-brand: #0A0F2E;
+  --color-brand-50: #12183F;
+  --color-brand-100: #1B2354;
+  --color-brand-200: #3B48A6;
+  --color-brand-active: #4C58C4;
+  --color-brand-hover: #161C46;
+  --color-brand-button-hover: #232C63;
+  --color-brand-secondary: #141935;
+  --color-autofill-bg: #FFFFFF;
+  --color-autofill-fg: #0f172a;
+  --color-autofill-dark-bg: #161A2C;
+  --color-autofill-dark-fg: #F1F2F8;
+  --color-toggle-bg: #2A3153;
+  --color-toggle-handle: #8FA1FF;
+  --color-overlay: rgba(0, 0, 0, 0.65);
+}
+
+:root {
+  /* Tipografía / render */
+  font-family: var(--app-font-family, Arial, sans-serif);
+  font-weight: var(--app-font-weight-regular, 400);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Esquema de color */
+  color-scheme: light dark;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  /* Scrollbar tokens */
+  --scrollbar-track-color: var(--color-surface);
+  --scrollbar-thumb-color: var(--color-brand-hover);
+
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  scrollbar-width: thin;
+
+  /* Tokens utilitarios (autofill por defecto) */
+  --autofill-bg: var(--color-autofill-bg);
+  --autofill-fg: var(--color-autofill-fg);
+
+  /* ---------------- PrimeVue Token Bridge ---------------- */
+  /* Brand / primarios */
+  --p-primary-color: var(--color-text) !important;
+  --p-primary-50: var(--color-brand-50) !important;
+  --p-primary-100: var(--color-brand-100) !important;
+  --p-primary-200: var(--color-brand-200) !important;
+  --p-primary-contrast-color: var(--color-brand-contrast) !important;
+  --p-primary-color-hover: var(--color-brand-50) !important;
+  --p-primary-color-active: var(--color-brand-100) !important;
+
+  /* =====================================================================
+   * Botones: cobertura completa por severidad (filled / outlined / text)
+   * Convención de hover-active para variantes filled: se oscurece con
+   * color-mix respecto al color base, así se adapta a cualquier paleta
+   * sin necesitar un token dedicado por estado.
+   * ===================================================================== */
+
+  /* Primary (acción principal de marca) */
+  --p-button-primary-background: var(--color-brand) !important;
+  --p-button-primary-hover-background: var(--color-brand-button-hover) !important;
+  --p-button-primary-active-background: var(--color-brand-active) !important;
+  --p-button-primary-border-color: var(--color-brand) !important;
+  --p-button-primary-hover-border-color: var(--color-brand-hover) !important;
+  --p-button-primary-active-border-color: var(--color-brand-active) !important;
+  --p-button-primary-color: var(--color-brand-contrast) !important;
+  --p-button-primary-hover-color: var(--color-brand-contrast) !important;
+  --p-button-primary-active-color: var(--color-brand-contrast) !important;
+  --p-button-outlined-primary-border-color: var(--color-brand) !important;
+  --p-button-outlined-primary-color: var(--color-link) !important;
+  --p-button-outlined-primary-hover-background: var(--color-brand-hover) !important;
+  --p-button-outlined-primary-active-background: var(--color-brand-100) !important;
+  --p-button-text-primary-color: var(--color-text) !important;
+  --p-button-text-primary-hover-background: var(--color-brand-100) !important;
+  --p-button-text-primary-active-background: var(--color-brand-100) !important;
+
+  /* Secondary (acción neutra / baja énfasis) */
+  --p-button-secondary-background: var(--color-secondary-100) !important;
+  --p-button-secondary-hover-background: color-mix(in srgb, var(--color-secondary-100) 88%, black) !important;
+  --p-button-secondary-active-background: color-mix(in srgb, var(--color-secondary-100) 75%, black) !important;
+  --p-button-secondary-border-color: var(--color-secondary-100) !important;
+  --p-button-secondary-hover-border-color: var(--color-secondary-100) !important;
+  --p-button-secondary-active-border-color: var(--color-secondary-100) !important;
+  --p-button-secondary-color: var(--color-text) !important;
+  --p-button-secondary-hover-color: var(--color-text) !important;
+  --p-button-secondary-active-color: var(--color-text) !important;
+  --p-button-outlined-secondary-border-color: var(--color-secondary-100) !important;
+  --p-button-outlined-secondary-color: var(--color-surface-contrast) !important;
+  --p-button-outlined-secondary-hover-background: var(--color-secondary-100) !important;
+  --p-button-outlined-secondary-active-background: var(--color-secondary-100) !important;
+  --p-button-text-secondary-color: var(--color-secondary) !important;
+  --p-button-text-secondary-hover-color: var(--color-brand) !important;
+  --p-button-text-secondary-hover-background: var(--color-secondary-100) !important;
+  --p-button-text-secondary-active-background: var(--color-secondary-100) !important;
+
+  /* Success (confirmación / acción positiva) */
+  --p-button-success-background: var(--color-success) !important;
+  --p-button-success-hover-background: color-mix(in srgb, var(--color-success) 88%, black) !important;
+  --p-button-success-active-background: color-mix(in srgb, var(--color-success) 75%, black) !important;
+  --p-button-success-border-color: var(--color-success) !important;
+  --p-button-success-hover-border-color: color-mix(in srgb, var(--color-success) 88%, black) !important;
+  --p-button-success-active-border-color: color-mix(in srgb, var(--color-success) 75%, black) !important;
+  --p-button-success-color: var(--color-success-contrast) !important;
+  --p-button-success-hover-color: var(--color-success-contrast) !important;
+  --p-button-success-active-color: var(--color-success-contrast) !important;
+  --p-button-outlined-success-border-color: var(--color-success) !important;
+  --p-button-outlined-success-color: var(--color-success) !important;
+  --p-button-outlined-success-hover-background: color-mix(in srgb, var(--color-success) 10%, transparent) !important;
+  --p-button-outlined-success-active-background: color-mix(in srgb, var(--color-success) 20%, transparent) !important;
+  --p-button-text-success-color: var(--color-success) !important;
+  --p-button-text-success-hover-background: color-mix(in srgb, var(--color-success) 10%, transparent) !important;
+  --p-button-text-success-active-background: color-mix(in srgb, var(--color-success) 20%, transparent) !important;
+
+  /* Info */
+  --p-button-info-background: var(--color-info) !important;
+  --p-button-info-hover-background: color-mix(in srgb, var(--color-info) 88%, black) !important;
+  --p-button-info-active-background: color-mix(in srgb, var(--color-info) 75%, black) !important;
+  --p-button-info-border-color: var(--color-info) !important;
+  --p-button-info-hover-border-color: color-mix(in srgb, var(--color-info) 88%, black) !important;
+  --p-button-info-active-border-color: color-mix(in srgb, var(--color-info) 75%, black) !important;
+  --p-button-info-color: var(--color-info-contrast) !important;
+  --p-button-info-hover-color: var(--color-info-contrast) !important;
+  --p-button-info-active-color: var(--color-info-contrast) !important;
+  --p-button-outlined-info-border-color: var(--color-info) !important;
+  --p-button-outlined-info-color: var(--color-info) !important;
+  --p-button-outlined-info-hover-background: color-mix(in srgb, var(--color-info) 10%, transparent) !important;
+  --p-button-outlined-info-active-background: color-mix(in srgb, var(--color-info) 20%, transparent) !important;
+  --p-button-text-info-color: var(--color-info) !important;
+  --p-button-text-info-hover-background: color-mix(in srgb, var(--color-info) 10%, transparent) !important;
+  --p-button-text-info-active-background: color-mix(in srgb, var(--color-info) 20%, transparent) !important;
+
+  /* Warn */
+  --p-button-warn-background: var(--color-warning) !important;
+  --p-button-warn-hover-background: color-mix(in srgb, var(--color-warning) 88%, black) !important;
+  --p-button-warn-active-background: color-mix(in srgb, var(--color-warning) 75%, black) !important;
+  --p-button-warn-border-color: var(--color-warning) !important;
+  --p-button-warn-hover-border-color: color-mix(in srgb, var(--color-warning) 88%, black) !important;
+  --p-button-warn-active-border-color: color-mix(in srgb, var(--color-warning) 75%, black) !important;
+  --p-button-warn-color: var(--color-warning-contrast) !important;
+  --p-button-warn-hover-color: var(--color-warning-contrast) !important;
+  --p-button-warn-active-color: var(--color-warning-contrast) !important;
+  --p-button-outlined-warn-border-color: var(--color-warning) !important;
+  --p-button-outlined-warn-color: var(--color-warning) !important;
+  --p-button-outlined-warn-hover-background: color-mix(in srgb, var(--color-warning) 10%, transparent) !important;
+  --p-button-outlined-warn-active-background: color-mix(in srgb, var(--color-warning) 20%, transparent) !important;
+  --p-button-text-warn-color: var(--color-warning) !important;
+  --p-button-text-warn-hover-background: color-mix(in srgb, var(--color-warning) 10%, transparent) !important;
+  --p-button-text-warn-active-background: color-mix(in srgb, var(--color-warning) 20%, transparent) !important;
+
+  /* Danger */
+  --p-button-danger-background: var(--color-danger) !important;
+  --p-button-danger-hover-background: color-mix(in srgb, var(--color-danger) 88%, black) !important;
+  --p-button-danger-active-background: color-mix(in srgb, var(--color-danger) 75%, black) !important;
+  --p-button-danger-border-color: var(--color-danger) !important;
+  --p-button-danger-hover-border-color: color-mix(in srgb, var(--color-danger) 88%, black) !important;
+  --p-button-danger-active-border-color: color-mix(in srgb, var(--color-danger) 75%, black) !important;
+  --p-button-danger-color: var(--color-danger-contrast) !important;
+  --p-button-danger-hover-color: var(--color-danger-contrast) !important;
+  --p-button-danger-active-color: var(--color-danger-contrast) !important;
+  --p-button-outlined-danger-border-color: var(--color-danger) !important;
+  --p-button-outlined-danger-color: var(--color-danger) !important;
+  --p-button-outlined-danger-hover-background: color-mix(in srgb, var(--color-danger) 10%, transparent) !important;
+  --p-button-outlined-danger-active-background: color-mix(in srgb, var(--color-danger) 20%, transparent) !important;
+  --p-button-text-danger-color: var(--color-danger) !important;
+  --p-button-text-danger-hover-background: color-mix(in srgb, var(--color-danger) 10%, transparent) !important;
+  --p-button-text-danger-active-background: color-mix(in srgb, var(--color-danger) 20%, transparent) !important;
+
+  /* Help (acento de marca — evita introducir un color ajeno a la paleta) */
+  --p-button-help-background: var(--color-brand-200) !important;
+  --p-button-help-hover-background: color-mix(in srgb, var(--color-brand-200) 88%, black) !important;
+  --p-button-help-active-background: color-mix(in srgb, var(--color-brand-200) 75%, black) !important;
+  --p-button-help-border-color: var(--color-brand-200) !important;
+  --p-button-help-hover-border-color: color-mix(in srgb, var(--color-brand-200) 88%, black) !important;
+  --p-button-help-active-border-color: color-mix(in srgb, var(--color-brand-200) 75%, black) !important;
+  --p-button-help-color: var(--color-brand-contrast) !important;
+  --p-button-help-hover-color: var(--color-brand-contrast) !important;
+  --p-button-help-active-color: var(--color-brand-contrast) !important;
+  --p-button-outlined-help-border-color: var(--color-brand-200) !important;
+  --p-button-outlined-help-color: var(--color-link) !important;
+  --p-button-outlined-help-hover-background: var(--color-brand-hover) !important;
+  --p-button-outlined-help-active-background: var(--color-brand-100) !important;
+  --p-button-text-help-color: var(--color-link) !important;
+  --p-button-text-help-hover-background: var(--color-brand-hover) !important;
+  --p-button-text-help-active-background: var(--color-brand-100) !important;
+
+  /* Contrast (máximo énfasis: invierte la superficie) */
+  --p-button-contrast-background: var(--color-surface-contrast) !important;
+  --p-button-contrast-hover-background: color-mix(in srgb, var(--color-surface-contrast) 88%, black) !important;
+  --p-button-contrast-active-background: color-mix(in srgb, var(--color-surface-contrast) 75%, black) !important;
+  --p-button-contrast-border-color: var(--color-surface-contrast) !important;
+  --p-button-contrast-hover-border-color: var(--color-surface-contrast) !important;
+  --p-button-contrast-active-border-color: var(--color-surface-contrast) !important;
+  --p-button-contrast-color: var(--color-surface) !important;
+  --p-button-contrast-hover-color: var(--color-surface) !important;
+  --p-button-contrast-active-color: var(--color-surface) !important;
+  --p-button-outlined-contrast-border-color: var(--color-surface-contrast) !important;
+  --p-button-outlined-contrast-color: var(--color-surface-contrast) !important;
+  --p-button-outlined-contrast-hover-background: var(--color-secondary-100) !important;
+  --p-button-outlined-contrast-active-background: var(--color-secondary-100) !important;
+  --p-button-text-contrast-color: var(--color-surface-contrast) !important;
+  --p-button-text-contrast-hover-background: var(--color-secondary-100) !important;
+  --p-button-text-contrast-active-background: var(--color-secondary-100) !important;
+
+  /* Link (botón estilo enlace) */
+  --p-button-link-color: var(--color-link) !important;
+  --p-button-link-hover-color: var(--color-link) !important;
+  --p-button-link-active-color: var(--color-link) !important;
+
+  /* Menu */
+  --p-menu-border-color: transparent !important;
+
+  /* Select Button */
+  --p-togglebutton-background: var(--color-brand-contrast) !important;
+  --p-togglebutton-color: var(--color-brand) !important;
+  --p-togglebutton-hover-color: var(--color-text) !important;
+  --p-togglebutton-content-checked-background: var(--color-brand) !important;
+  --p-togglebutton-checked-background: var(--color-brand) !important;
+  --p-togglebutton-checked-color: var(--color-brand-contrast) !important;
+
+  /* Toggle */
+  --p-toggleswitch-background: var(--color-toggle-bg) !important;
+  --p-toggleswitch-handle-color: var(--color-toggle-handle) !important;
+  --p-toggleswitch-handle-checked-background: var(--color-white) !important;
+  --p-toggleswitch-handle-checked-hover-background: var(--color-white) !important;
+
+  /* Select */
+  --p-select-background: var(--color-input) !important;
+  --p-select-border-color: var(--color-surface) !important;
+  --p-select-color: var(--color-text) !important;
+  --p-select-option-selected-color: var(--color-text) !important;
+  --p-select-option-color: var(--color-text) !important;
+  --p-select-option-group-background: var(--color-input) !important;
+  --p-select-overlay-background: color-mix(in srgb, var(--color-surface) 98%, black 2%) !important;
+  --p-select-overlay-border-color: transparent !important;
+  --p-select-option-focus-background: var(--color-brand-200) !important;
+  --p-select-option-focus-color: var(--color-brand-contrast) !important;
+  --p-select-option-selected-background: var(--color-brand-active) !important;
+  --p-list-option-selected-color: var(--color-text) !important;
+  --p-list-option-selected-focus-color: var(--color-text) !important;
+
+  /* Autocomplete */
+  --p-autocomplete-overlay-background: color-mix(in srgb, var(--color-brand) 98%, black 2%) !important;
+  --p-autocomplete-overlay-border-color: var(--color-brand) !important;
+
+  /* Superficies / bordes / inputs */
+  --p-content-background: var(--color-surface) !important;
+  --p-surface-card: var(--color-surface) !important;
+  --p-surface-border: var(--color-surface) !important;
+  --p-card-background: var(--color-surface-card) !important;
+  --p-card-color: var(--color-text) !important;
+
+  --p-inputtext-focus-border-color: var(--color-brand-200) !important;
+
+  /* Input chips */
+  --p-inputchips-border-color: var(--color-surface) !important;
+  --p-inputchips-focus-border-color: var(--color-brand-200) !important;
+
+  /* Checkbox */
+  --p-form-field-background: var(--color-input) !important;
+  --p-checkbox-checked-background: var(--color-brand-active) !important;
+  --p-checkbox-border-color: var(--color-secondary-100) !important;
+  --p-checkbox-checked-hover-background: var(--color-brand-hover) !important;
+  --p-checkbox-checked-hover-border-color: var(--color-secondary-100) !important;
+
+  /* Texto */
+  --p-primary-color-text: var(--color-brand-contrast) !important;
+  --p-text-color: var(--color-text) !important;
+
+  /* Tables */
+  --p-treetable-row-background: var(--color-surface) !important;
+
+  /* Divider */
+  --p-divider-border-color: var(--color-secondary-100) !important;
+
+  /* Radio Button */
+  --p-radiobutton-checked-border-color: var(--color-brand) !important;
+  --p-radiobutton-checked-background: var(--color-brand-50) !important;
+
+  /* Paginator */
+  --p-paginator-nav-button-selected-color: var(--color-brand-contrast) !important;
+}
+
+:root.dark {
+  --autofill-bg: var(--color-autofill-dark-bg);
+  --autofill-fg: var(--color-autofill-dark-fg);
+}
+
+/* Scrollbars */
+* {
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--scrollbar-thumb-color) 85%, white);
+}
+
+.loading-spinner svg {
+  color: var(--color-loading-spinner);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+/* Datepicker: estados de selección */
+.p-datepicker-day-selected,
+.p-datepicker-day-selected-range,
+.p-datepicker-month-selected,
+.p-datepicker-year-selected {
+  background-color: var(--color-brand-active) !important;
+  color: var(--color-brand-contrast) !important;
+}
+
+/* Tablas / TreeTables: fondos y filas striped */
+:is(.p-datatable-header-cell,
+    .p-datatable-frozen-column) {
+  background-color: transparent !important;
+}
+
+:is(.p-datatable-tbody, .p-treetable-tbody) > tr:nth-child(odd) {
+  background-color: color-mix(in srgb, var(--color-surface) 96%, black 4%) !important;
+}
+
+:is(.p-datatable-tbody, .p-treetable-tbody) > tr:nth-child(even) {
+  background-color: var(--color-surface) !important;
+}
